@@ -1,38 +1,38 @@
 -- Creación de las tablas de SCOTT
 
 create table dept (
-        deptno integer,
-        dname  text,
-        loc    text,
+        deptno int(2),
+        dname  varchar(14),
+        loc    varchar(13),
         constraint pk_dept primary key (deptno)
 );
 
 create table emp (
-        empno    integer,
-        ename    text,
-        job      text,
-        mgr      integer,
+        empno    int(4),
+        ename    varchar(10),
+        job      varchar(9),
+        mgr      int(4),
         hiredate date,
-        sal      integer,
-        comm     integer,
-        deptno   integer,
+        sal      dec(7,2),
+        comm     dec(7,2),
+        deptno   int(2),
         constraint pk_emp primary key (empno),
-        constraint fk_mgr foreign key (mgr) references emp (empno),
         constraint fk_deptno foreign key (deptno) references dept (deptno)
 );
 
-create table salgrade (
-        grade integer,
-        losal integer,
-        hisal integer,
-        constraint pk_salgrade primary key (grade)
-);
-
 create table bonus (
-        empno integer,
-        bonus integer,
+        empno int,
+        bonus int,
         constraint pk_bonus primary key (empno),
         constraint fk_empno foreign key (empno) references emp (empno)
+        
+);
+
+create table salgrade (
+        grade int,
+        losal int,
+        hisal int,
+        constraint pk_salgrade primary key (grade)
 );
 
 -- Inserción de datos en las tablas
@@ -62,18 +62,3 @@ insert into salgrade values (2, 1201, 1400);
 insert into salgrade values (3, 1401, 2000);
 insert into salgrade values (4, 2001, 3000);
 insert into salgrade values (5, 3001, 9999);
-
-insert into bonus values (7369, 100);
-insert into bonus values (7499, 200);
-insert into bonus values (7521, 300);
-insert into bonus values (7566, 400);
-insert into bonus values (7654, 500);
-insert into bonus values (7698, 600);
-insert into bonus values (7782, 700);
-insert into bonus values (7788, 800);
-insert into bonus values (7839, 900);
-insert into bonus values (7844, 1000);
-insert into bonus values (7876, 1100);
-insert into bonus values (7900, 1200);
-insert into bonus values (7902, 1300);
-insert into bonus values (7934, 1400);
