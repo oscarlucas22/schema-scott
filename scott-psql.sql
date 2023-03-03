@@ -13,11 +13,10 @@ create table emp (
         job      text,
         mgr      integer,
         hiredate date,
-        sal      integer,
-        comm     integer,
+        sal      dec(7,2),
+        comm     dec(7,2),
         deptno   integer,
         constraint pk_emp primary key (empno),
-        constraint fk_mgr foreign key (mgr) references emp (empno),
         constraint fk_deptno foreign key (deptno) references dept (deptno)
 );
 
