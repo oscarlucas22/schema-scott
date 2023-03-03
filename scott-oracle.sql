@@ -1,7 +1,5 @@
 -- Creación de las tablas de SCOTT
 
-create table dummy (dummy number);
- 
 create table dept (
         deptno number(2) constraint pk_dept PRIMARY KEY,
         dname varchar2(14),
@@ -55,5 +53,3 @@ insert into salgrade values (2,1201,1400);
 insert into salgrade values (3,1401,2000);
 insert into salgrade values (4,2001,3000);
 insert into salgrade values (5,3001,9999);
- 
-insert into dummy values (0);
