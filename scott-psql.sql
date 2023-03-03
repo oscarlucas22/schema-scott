@@ -23,15 +23,14 @@ create table emp (
 create table salgrade (
         grade integer,
         losal integer,
-        hisal integer,
-        constraint pk_salgrade primary key (grade)
+        hisal integer
 );
 
 create table bonus (
-        empno integer,
-        bonus integer,
-        constraint pk_bonus primary key (empno),
-        constraint fk_empno foreign key (empno) references emp (empno)
+        ename varchar(10),
+        job varchar(9),
+        sal integer,
+        comm integer
 );
 
 -- Inserción de datos en las tablas
