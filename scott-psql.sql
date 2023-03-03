@@ -2,15 +2,15 @@
 
 create table dept (
         deptno integer,
-        dname  text,
-        loc    text,
+        dname  varchar(14),
+        loc    varchar(13),
         constraint pk_dept primary key (deptno)
 );
 
 create table emp (
         empno    integer,
-        ename    text,
-        job      text,
+        ename    varchar(10),
+        job      varchar(9),
         mgr      integer,
         hiredate date,
         sal      dec(7,2),
