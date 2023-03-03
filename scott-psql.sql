@@ -62,18 +62,3 @@ insert into salgrade values (2, 1201, 1400);
 insert into salgrade values (3, 1401, 2000);
 insert into salgrade values (4, 2001, 3000);
 insert into salgrade values (5, 3001, 9999);
-
-insert into bonus values (7369, 100);
-insert into bonus values (7499, 200);
-insert into bonus values (7521, 300);
-insert into bonus values (7566, 400);
-insert into bonus values (7654, 500);
-insert into bonus values (7698, 600);
-insert into bonus values (7782, 700);
-insert into bonus values (7788, 800);
-insert into bonus values (7839, 900);
-insert into bonus values (7844, 1000);
-insert into bonus values (7876, 1100);
-insert into bonus values (7900, 1200);
-insert into bonus values (7902, 1300);
-insert into bonus values (7934, 1400);
